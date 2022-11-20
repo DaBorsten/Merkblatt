@@ -1,4 +1,4 @@
-* {
+*:not(table, th, tr, td) {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     left: 50%;
@@ -14,6 +14,14 @@ h1 {
     padding-top: 1rem;
     font-size: 3rem;
     text-align: center;
+    max-width: 90vw;
+}
+
+h2 {
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 90vw;
 }
 
 p {
@@ -23,19 +31,7 @@ p {
 }
 
 .screenshots {
-    max-width: 95vw;
-}
-
-table {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: rgb(186, 229, 247);
-    text-align: center;
-    border-spacing: 0;
-}
-
-tr {
-    background-color: white;
+    max-width: 90vw;
 }
 
 @media (max-width: 400px){
