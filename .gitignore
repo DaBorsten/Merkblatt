@@ -1,14 +1,14 @@
 /index copy.html
-/html htmlStructure.html
-/html javascript.html
-/html table.html
-/html tags.html
-/js jsDatentypen.js
-/js jsVariablen.js
-/png htmlGrundstruktur.png
-/png htmlTags.png
-/png JavaScriptVerlinken.png
-/png jsEinfacheDatentypen.png
-/png jsVariablen.png
-/png Screenshot 2022-11-21 192107.png
-/png tabelle.png
+/html/htmlStructure.html
+/html/javascript.html
+/html/table.html
+/html/tags.html
+/js/jsDatentypen.js
+/js/jsVariablen.js
+/png/htmlGrundstruktur.png
+/png/htmlTags.png
+/png/JavaScriptVerlinken.png
+/png/jsEinfacheDatentypen.png
+/png/jsVariablen.png
+/png/Screenshot 2022-11-21 192107.png
+/png/tabelle.png
