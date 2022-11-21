@@ -7,60 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merkblatt</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <h1>Merkblatt</h1>
 
-    <h1>HTML</h1>
+        <div class="tabs">
+            <button data-tab-target="#htmlTab" class="active tab">HTML</button>
 
-    <p>HTML ist das "Gerüst" einer Webseite. Dazu zählen beispielsweise Überschriften, Text, Buttons und Eingabefelder.</p>
+            <button data-tab-target="#javaScriptTab" class="tab">JavaScript</button>
+        </div>
+    </header>
 
-    <br>
+    <div class="tab-content">
+        <section class="active" id="htmlTab" data-tab-content>
 
-    <p>Jedes HTML Dokument ist so aufgebaut:</p>
+            <div>
+                <h2>HTML</h2>
 
-    <img class="screenshots" src="htmlGrundstruktur.png" alt="HTML Grundstruktur">
+                <p>HTML ist das "Gerüst" einer Webseite. Dazu zählen beispielsweise Überschriften, Text, Buttons und
+                    Eingabefelder.</p>
+            </div>
 
-    <br>
-    <br>
-    <br>
+            <div>
+                <p>Jedes HTML Dokument ist so aufgebaut:</p>
+                <img class="screenshots" src="htmlGrundstruktur.png" alt="HTML Grundstruktur">
+            </div>
 
-    <p>Hier sind ein paar HTML Tags vorgestellt:</p>
-    <img class="screenshots" src="htmlTags.png" alt="HTML Tags">
+            <div>
+                <p>Hier sind ein paar HTML Tags vorgestellt:</p>
+                <img class="screenshots" src="htmlTags.png" alt="HTML Tags">
+            </div>
 
-    <br>
-    <br>
-    <br>
+            <div>
+                <p>Ein wichtiges Element sind Tabellen:</p>
+                <img class="screenshots" src="tabelle.png" alt="Tabelle">
+            </div>
 
-    <p>Ein wichtiges Element sind Tabellen:</p>
-    <img class="screenshots" src="tabelle.png" alt="Tabelle">
+        </section>
 
-    <br>
-    <br>
-    <br>
+        <section id="javaScriptTab" data-tab-content>
 
-    <h1>JavaScript</h1>
+            <h2>JavaScript</h2>
 
-    <p>JavaScript gibt der Website Funktionen, mit denen man die Seite manipulieren/verändern kann.</p>
-    <img class="screenshots" src="JavaScriptVerlinken.png" alt="JavaScript verlinken">
+            <div>
+                <p>JavaScript gibt der Website Funktionen, mit denen man die Seite manipulieren/verändern kann.</p>
+                <img class="screenshots" src="JavaScriptVerlinken.png" alt="JavaScript verlinken">
+            </div>
 
-    <br>
-    <br>
-    <br>
+            <div>
+                <h3>Variablen</h3>
+                <img class="screenshots" src="jsVariablen.png" alt="JavaScript Variablen">
+            </div>
 
-    <h2>Variablen</h2>
+            <div>
+                <h3>Einfache Datentypen</h3>
+                <img class="screenshots" src="jsEinfacheDatentypen.png" alt="Einfache Datentypen">
+            </div>
 
-    <img class="screenshots" src="jsVariablen.png" alt="JavaScript Variablen">
-
-    <br>
-    <br>
-    <br>
-
-    <h2>Einfache Datentypen</h2>
-
-    <img class="screenshots" src="jsEinfacheDatentypen.png" alt="Einfache Datentypen">
-
+        </section>
+    </div>
 
 </body>
 
