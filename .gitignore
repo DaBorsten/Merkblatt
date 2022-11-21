@@ -1,7 +1,4 @@
 /index copy.html
-.gitignore
-/html/
-.gitignore
-/png/
-.gitignore
-/js/
+html/
+js/
+png/
