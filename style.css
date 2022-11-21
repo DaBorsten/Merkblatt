@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    position: relative;
+    position: relative;a
     left: 50%;
     translate: -50%;
     max-width: 90vw;
