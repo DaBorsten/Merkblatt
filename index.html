@@ -27,9 +27,9 @@
     <div class="tab-content">
         <section class="active" id="htmlTab" data-tab-content>
 
-            <div>
-                <h2>HTML</h2>
+            <h2>HTML</h2>
 
+            <div>
                 <p>HTML ist das "Gerüst" einer Webseite. Dazu zählen beispielsweise Überschriften, Text, Buttons und
                     Eingabefelder.</p>
             </div>
@@ -75,20 +75,42 @@
         <section id="aufgabenTab" data-tab-content>
 
             <h2>Aufgaben</h2>
-
-            <h3>Beispiel: Schrauben-Discount</h3>
-
-            <p>Hier findet ihr den allgemeinen Aufbau von der "Schrauben-Discount" Aufgabe.<br>
-                Hierbei wurden die Aufgaben zwecks der Übersichtlichkeit nur in simpelster Form umgesetzt.</p>
-            <br>
-            <div>
-                <p>HTML Teil</p>
-                <img class="screenshots" src="schrauben_html.webp" alt="Schrauben HTML" loading="lazy">
+            <div class="aufgabenListe tabs">
+                <button class="tab" onclick="location.href='#schraubenDiscount'">Schrauben-Discount</button>
+                <button class="tab" onclick="location.href='#BMI'">BMI-Rechner mit Bedingungen</button>
             </div>
 
-            <div>
-                <p>JavaScript Teil</p>
-                <img class="screenshots" src="schrauben_js.webp" alt="Schrauben JavaScript" loading="lazy">
+            <div class="aufgabe" id="schraubenDiscount">
+                <h3>Beispiel: Schrauben-Discount</h3>
+
+                <p>Hier findet ihr den allgemeinen Aufbau von der "Schrauben-Discount" Aufgabe.<br>
+                    Hierbei wurden die Aufgaben zwecks der Übersichtlichkeit nur in simpelster Form umgesetzt.</p>
+                <br>
+                <div>
+                    <p>HTML Teil</p>
+                    <img class="screenshots" src="schrauben_html.webp" alt="Schrauben HTML" loading="lazy">
+                </div>
+
+                <div>
+                    <p>JavaScript Teil</p>
+                    <img class="screenshots" src="schrauben_js.webp" alt="Schrauben JavaScript" loading="lazy">
+                </div>
+            </div>
+
+            <div class="aufgabe" id="BMI">
+                <h3>Beispiel: BMI-Rechner mit Bedingungen</h3>
+
+                <p>BMI-Rechner mit Bedingungen für Einstufung der WHO.</p>
+                <br>
+                <div>
+                    <p>HTML Teil</p>
+                    <img class="screenshots" src="BMI If Statements HTML Teil.webp" alt="BMI HTML" loading="lazy">
+                </div>
+
+                <div>
+                    <p>JavaScript Teil</p>
+                    <img class="screenshots" src="BMI If Statements JS Teil.webp" alt="BMI JavaScript" loading="lazy">
+                </div>
             </div>
 
         </section>

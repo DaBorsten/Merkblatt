@@ -46,6 +46,7 @@ header {
     border-radius: .5rem;
     background-color: rgb(0, 115, 168);
     color: white;
+    cursor: pointer;
 }
 
 .tab:hover {
@@ -69,7 +70,11 @@ header {
     display: block;
 }
 
-section * {
+.tab-content {
+    padding: 10vh 0;
+}
+
+section * :not(.tab) {
     position: relative;
     left: 50%;
     translate: -50%;
@@ -104,4 +109,14 @@ img {
 .screenshots {
     width: 100%;
     height: auto;
+}
+
+.aufgabenListe {
+    padding-bottom: 10vh;
+    border-bottom: 2px solid grey
+}
+
+.aufgabe {
+    padding: 10vh 0;
+    border-bottom: 2px solid grey
 }
