@@ -111,6 +111,14 @@ img {
     height: auto;
 }
 
+.screenshotTable {
+    width: 90%;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5vh;
+}
+
+
 .aufgabenListe {
     padding-bottom: 10vh;
     border-bottom: 2px solid grey
