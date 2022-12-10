@@ -1,7 +1,7 @@
 
 const cacheName = 'cache-v1'
 const resourcesToPrecache = [
-
+    '/',
     'index.html',
     'style.css',
     'script.js',
@@ -18,7 +18,7 @@ const resourcesToPrecache = [
     'quadratische Gleichung JS.webp',
     'schrauben_html.webp',
     'schrauben_js.webp',
-    'tabelle.webp'
+    'tabelle.webp',
 ]
 
 self.addEventListener('install', event => {
