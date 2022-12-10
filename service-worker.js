@@ -22,14 +22,9 @@ const resourcesToPrecache = [
 
 self.addEventListener('install', event => {
     console.log('Service worker install event!')
-    event.waitUntil(
-        caches.open(cacheName).then(cache => {
-                cache.addAll(resourcesToPrecache)
-                    .catch(error => {
-                        console.log('Error while caching resources:', error)
-                    })
-            })
-    )
+    caches.open(cacheName).then(cache => {
+        cache.addAll(resourcesToPrecache)
+    })
 })
 
 
