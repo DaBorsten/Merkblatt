@@ -8,6 +8,10 @@
 
     --headingColor: white;
     --paragraphColor: hsl(0, 0%, 70%);
+
+    --button: hsl(165, 100%, 30%);
+    --buttonHover: hsl(165, 100%, 40%);
+    --buttonActive: hsl(165, 100%, 20%);
 }
 
 @media (max-width: 480px) {
@@ -50,22 +54,22 @@ header {
     padding: 16px 32px 16px 32px;
     border: none;
     border-radius: .5rem;
-    background-color: rgb(0, 115, 168);
+    background-color: var(--button);
     color: white;
     cursor: pointer;
 }
 
 .tab:hover {
-    background-color: rgb(0, 134, 196);
+    background-color: var(--buttonHover);
 }
 
 .tab:active {
     transform: scale(0.95);
-    background-color: rgb(0, 93, 136);
+    background-color: var(--buttonActive);
 }
 
 .tab.active {
-    background-color: rgb(0, 81, 119);
+    background-color: var(--buttonActive);
 }
 
 [data-tab-content] {
