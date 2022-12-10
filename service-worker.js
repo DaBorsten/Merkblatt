@@ -4,7 +4,10 @@ const cacheName = 'cache-v1';
 const precacheResources = [
     'index.html',
     'style.css',
-    'script.js'
+    'script.js',
+    'webmanifest.json',
+    'favicons/',
+    'https://s3.scriptcdn.net/cdn/c7fa7451-6f95-4815-ac32-b8cc2537837a'
 ];
 
 // When the service worker is installing, open the cache and add the precache resources to it
