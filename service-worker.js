@@ -1,22 +1,44 @@
-// The service worker code
+
+const cacheName = 'cache-v1'
+const resourcesToPrecache = [
+    '/',
+    'index.html',
+    'style.css',
+    'script.js',
+    'BMI If Statements HTML Teil.webp',
+    'BMI If Statements JS Teil.webp',
+    'htmlGrundstruktur.webp',
+    'htmlTags.webp',
+    'if else.webp',
+    'JavaScriptVerlinken.webp',
+    'jsEinfacheDatentypen.webp',
+    'jsVariablen.webp',
+    'logische Operatoren.webp',
+    'quadratische Gleichung HTML.webp',
+    'quadratische Gleichung JS.webp',
+    'schrauben_html.webp',
+    'schrauben_js.webp',
+    'tabelle.webp'
+]
+
 self.addEventListener('install', event => {
-    // Open a new cache and add all the necessary assets and resources
+    console.log('Service worker install event!')
     event.waitUntil(
-      caches.open('pwa-cache')
-        .then(cache => cache.addAll([
-          '/',
-          '/index.html',
-          '/styles.css',
-          '/script.js',
-          '/favicons/'
-        ]))
-    );
-  });
-  
-  self.addEventListener('fetch', event => {
-    // Match the request with the cached assets and serve the cached response, if available
-    event.respondWith(
-      caches.match(event.request)
-        .then(response => response || fetch(event.request))
-    );
-  });
+        caches.open(cacheName)
+            .then(cache => {
+                return cache.addAll(resourcesToPrecache)
+            })
+    )
+})
+
+self.addEventListener('activate', event => {
+    console.log('Activate event!')
+})
+
+self.addEventListener('fetch', event => {
+    event.respondWith(caches.match(event.request)
+        .then(cachedResponse => {
+            return cachedResponse || fetch(event.request)
+        })
+    )
+})

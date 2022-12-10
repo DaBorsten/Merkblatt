@@ -22,14 +22,20 @@
     <title>Merkblatt</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+
     <script>
-        // Register the service worker
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log('Service worker registered'))
-                .catch(err => console.error('Error registering service worker:', err));
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(reg => {
+                    console.log('Registered!', reg)
+                }).catch(err => {
+                    console.log('Registration failed: ', err)
+                })
+            })
         }
     </script>
+
     <script src="script.js" defer></script>
 </head>
 
