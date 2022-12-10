@@ -20,7 +20,9 @@ const imagesToPrecache = [
     'quadratische Gleichung HTML.webp',
     'quadratische Gleichung JS.webp',
     'schrauben_html.webp',
-    'schrauben_js.webp'
+    'schrauben_js.webp',
+    'favicons/android-chrome-192x192.png',
+    'favicons/android-chrome-512x512.png'
 ]
 
 self.addEventListener('install', event => {
