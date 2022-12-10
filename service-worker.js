@@ -4,11 +4,20 @@ const resourcesToPrecache = [
     'index.html',
     'style.css',
     'script.js',
-
     'htmlGrundstruktur.webp',
     'htmlTags.webp',
-
     'tabelle.webp',
+    'BMI If Statements HTML Teil.webp',
+    'BMI If Statements JS Teil.webp',
+    'if else.webp',
+    'JavaScriptVerlinken.webp',
+    'jsEinfacheDatentypen.webp',
+    'jsVariablen.webp',
+    'logische Operatoren.webp',
+    'quadratische Gleichung HTML.webp',
+    'quadratische Gleichung JS.webp',
+    'schrauben_html.webp',
+    'schrauben_js.webp',
 ]
 
 self.addEventListener('install', event => {
