@@ -1,6 +1,7 @@
 const cacheName = 'cache-v1'
 const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
+    '/',
     'index.html',
     'style.css',
     'script.js'
@@ -40,9 +41,9 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
-    event.respondWith(caches.match(event.request)
-        .then(cachedResponse => {
-            return cachedResponse || fetch(event.request)
+    event.respondWith(caches.match(event.request, {ignoreSearch:true})
+        .then(response  => {
+            return response  || fetch(event.request)
         })
     )
 })
