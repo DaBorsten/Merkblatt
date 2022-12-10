@@ -4,6 +4,8 @@
 
     "id": "/Merkblatt/",
     "start_url": "/Merkblatt/",
+    "description": "Übungsblatt für HTML und JavaScript",
+    "orientation": "any",
     "icons": [
         {
             "src": "favicons/android-chrome-192x192.png",
