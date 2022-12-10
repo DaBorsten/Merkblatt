@@ -2,10 +2,7 @@
 const cacheName = 'cache-v1';
 // List the files to precache
 const precacheResources = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js'
+
 ];
 
 // When the service worker is installing, open the cache and add the precache resources to it
