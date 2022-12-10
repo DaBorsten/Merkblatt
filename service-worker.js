@@ -17,7 +17,7 @@ const resourcesToPrecache = [
     'quadratische Gleichung HTML.webp',
     'quadratische Gleichung JS.webp',
     'schrauben_html.webp',
-    'schrauben_js.webp',
+    'schrauben_js.webp'
 ]
 
 self.addEventListener('install', event => {
