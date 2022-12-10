@@ -6,7 +6,10 @@ const precacheResources = [
     '/',
     '/index.html',
     '/style.css',
-    '/script.js'
+    '/script.js',
+    'webmanifest.json',
+    '/favicons/',
+    
 ];
 
 // When the service worker is installing, open the cache and add the precache resources to it
