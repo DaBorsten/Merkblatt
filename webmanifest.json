@@ -1,7 +1,7 @@
 {
     "name": "Merkblatt",
     "short_name": "Merkblatt",
-
+    "lang": "de-DE",
     "id": "/Merkblatt/",
     "start_url": "/Merkblatt/",
     "description": "Übungsblatt für HTML und JavaScript",
