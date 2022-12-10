@@ -18,7 +18,7 @@
     :root {
         --headingOne: 3rem;
         --headingTwo: 2rem;
-        --headingThree: 1.5rem;
+        --headingThree: 2rem;
         --paragraphFontSize: 1.2rem;
     }
 }
@@ -114,6 +114,7 @@ h3 {
 p {
     text-align: center;
     color: var(--paragraphColor);
+    font-size: var(--paragraphFontSize);
 }
 
 img {
