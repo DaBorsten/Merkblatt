@@ -1,23 +1,6 @@
 const cacheName = 'cache-v1'
 const resourcesToPrecache = [
-    '/',
-    'index.html',
-    'style.css',
-    'script.js',
-    'BMI If Statements HTML Teil.webp',
-    'BMI If Statements JS Teil.webp',
-    'htmlGrundstruktur.webp',
-    'htmlTags.webp',
-    'if else.webp',
-    'JavaScriptVerlinken.webp',
-    'jsEinfacheDatentypen.webp',
-    'jsVariablen.webp',
-    'logische Operatoren.webp',
-    'quadratische Gleichung HTML.webp',
-    'quadratische Gleichung JS.webp',
-    'schrauben_html.webp',
-    'schrauben_js.webp',
-    'tabelle.webp',
+
 ]
 
 self.addEventListener('install', event => {
