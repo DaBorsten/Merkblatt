@@ -26,9 +26,13 @@ self.addEventListener('install', event => {
         caches.open(cacheName)
             .then(cache => {
                 return cache.addAll(resourcesToPrecache)
+                    .catch(error => {
+                        console.log('Error while caching resources:', error)
+                    })
             })
     )
 })
+
 
 self.addEventListener('activate', event => {
     console.log('Activate event!')
