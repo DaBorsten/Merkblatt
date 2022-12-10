@@ -1,8 +1,11 @@
 const cacheName = 'cache-v1'
+const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
     'index.html',
     'style.css',
-    'script.js',
+    'script.js'
+]
+const imagesToPrecache = [
     'htmlGrundstruktur.webp',
     'htmlTags.webp',
     'tabelle.webp',
@@ -24,6 +27,9 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName).then(cache => {
             return cache.addAll(resourcesToPrecache)
+        }),
+        caches.open(cacheNameImages).then(cache => {
+            return cache.addAll(imagesToPrecache)
         })
     )
 })
