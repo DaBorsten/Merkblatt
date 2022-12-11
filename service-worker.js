@@ -1,3 +1,13 @@
+
+// Registriere die Funktion als Dienstarbeiter
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then(registration => {
+            // Rufe die Funktion alle 24 Stunden auf
+            setInterval(deleteUnusedCache, 86400000);
+        });
+}
+
 const cacheName = 'cache-v1'
 const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
@@ -43,9 +53,37 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
-    event.respondWith(caches.match(event.request, {ignoreSearch:true})
-        .then(response  => {
-            return response  || fetch(event.request)
+    event.respondWith(caches.match(event.request, { ignoreSearch: true })
+        .then(response => {
+            return response || fetch(event.request)
         })
     )
 })
+
+// Funktion, um den Cache nach unbenutztem Inhalt zu durchsuchen
+const deleteUnusedCache = () => {
+    // Hole alle Einträge im Cache
+    caches.open(cacheName).then(cache => cache.keys())
+        .then(keys => {
+            // Durchlaufe alle Einträge im Cache
+            keys.forEach(request => {
+                // Überprüfe, ob der Eintrag seit mehr als einem Tag nicht verwendet wurde
+                if (Date.now() - request.lastUsed > 86400000) {
+                    // Lösche den Eintrag aus dem Cache
+                    cache.delete(request)
+                }
+            })
+        })
+
+    caches.open(cacheNameImages).then(cache => cache.keys())
+        .then(keys => {
+            // Durchlaufe alle Einträge im Cache
+            keys.forEach(request => {
+                // Überprüfe, ob der Eintrag seit mehr als einem Tag nicht verwendet wurde
+                if (Date.now() - request.lastUsed > 86400000) {
+                    // Lösche den Eintrag aus dem Cache
+                    cache.delete(request)
+                }
+            })
+        })
+}
