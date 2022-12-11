@@ -3,24 +3,24 @@ const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
     '/Merkblatt/',
     'index.html',
-    'style.css',
-    'script.js'
+    'css/style.css',
+    'js/script.js'
 ]
 const imagesToPrecache = [
-    'htmlGrundstruktur.webp',
-    'htmlTags.webp',
-    'tabelle.webp',
-    'BMI If Statements HTML Teil.webp',
-    'BMI If Statements JS Teil.webp',
-    'if else.webp',
-    'JavaScriptVerlinken.webp',
-    'jsEinfacheDatentypen.webp',
-    'jsVariablen.webp',
-    'logische Operatoren.webp',
-    'quadratische Gleichung HTML.webp',
-    'quadratische Gleichung JS.webp',
-    'schrauben_html.webp',
-    'schrauben_js.webp',
+    'pictures/htmlGrundstruktur.webp',
+    'pictures/htmlTags.webp',
+    'pictures/tabelle.webp',
+    'pictures/BMI If Statements HTML Teil.webp',
+    'pictures/BMI If Statements JS Teil.webp',
+    'pictures/if else.webp',
+    'pictures/JavaScriptVerlinken.webp',
+    'pictures/jsEinfacheDatentypen.webp',
+    'pictures/jsVariablen.webp',
+    'pictures/logische Operatoren.webp',
+    'pictures/quadratische Gleichung HTML.webp',
+    'pictures/quadratische Gleichung JS.webp',
+    'pictures/schrauben_html.webp',
+    'pictures/schrauben_js.webp',
     'favicons/android-chrome-192x192.png',
     'favicons/android-chrome-512x512.png'
 ]
