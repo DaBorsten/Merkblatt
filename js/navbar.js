@@ -3,6 +3,8 @@ let navbar = document.querySelector('.navbar')
 let mobileMenu = document.querySelector('.mobileMenu')
 let body = document.body
 
+let resizeTimer
+
 mobileMenu.addEventListener('click', () => {
     const visibility = navbar.getAttribute('data-visible')
 
@@ -13,6 +15,18 @@ mobileMenu.addEventListener('click', () => {
     }
 })
 
+window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper")
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper")
+    }, 400)
+})
+
+window.addEventListener('resize', () => {
+    closeMenu()
+})
+
 window.addEventListener('orientationchange', () => {
     if (screen.width > 800) {
         closeMenu()
@@ -20,13 +34,17 @@ window.addEventListener('orientationchange', () => {
 })
 
 function openMenu() {
-    navbar.setAttribute('data-visible', "true")
-    mobileMenu.setAttribute('data-active', "true")
-    body.style.overflow = "hidden"
+    if (navbar.getAttribute('data-visible') === "false") {
+        navbar.setAttribute('data-visible', "true")
+        mobileMenu.setAttribute('data-active', "true")
+        body.style.overflow = "hidden"
+    }
 }
 
 function closeMenu() {
-    navbar.setAttribute('data-visible', "false")
-    mobileMenu.setAttribute('data-active', "false")
-    body.style.overflow = "scroll"
+    if (navbar.getAttribute('data-visible') === "true") {
+        navbar.setAttribute('data-visible', "false")
+        mobileMenu.setAttribute('data-active', "false")
+        body.style.overflow = "scroll"
+    }
 }
