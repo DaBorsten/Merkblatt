@@ -1,8 +1,8 @@
 :root {
-    --headingOne: 4rem;
-    --headingTwo: 3rem;
+    --headingOne: 3rem;
+    --headingTwo: 2rem;
     --headingThree: 2rem;
-    --paragraphFontSize: 1.5rem;
+    --paragraphFontSize: 1.2rem;
 
     --backgroundColor: hsl(0, 0%, 0%);
 
@@ -14,62 +14,15 @@
     --buttonActive: hsl(165, 100%, 20%);
 }
 
-@media (max-width: 480px) {
-    :root {
-        --headingOne: 3rem;
-        --headingTwo: 2rem;
-        --headingThree: 2rem;
-        --paragraphFontSize: 1.2rem;
-    }
-}
-
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     margin: 0;
-    padding: 5vw;
+    padding: 0;
     background-color: var(--backgroundColor);
-}
-
-header {
-    position: relative;
-    left: 50%;
-    translate: -50%;
-    max-width: 90vw;
-    padding-bottom: 10vh;
-    border-bottom: 2px solid grey;
-}
-
-.tabs {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    gap: 5vw;
-}
-
-.tab {
-    font-size: var(--paragraphFontSize);
-    padding: 16px 32px 16px 32px;
-    border: none;
-    border-radius: .5rem;
-    background-color: var(--button);
-    color: white;
-    cursor: pointer;
-}
-
-.tab:hover {
-    background-color: var(--buttonHover);
-}
-
-.tab:active {
-    transform: scale(0.95);
-    background-color: var(--buttonActive);
-}
-
-.tab.active {
-    background-color: var(--buttonActive);
+    overflow-x: hidden;
 }
 
 [data-tab-content] {
@@ -81,7 +34,7 @@ header {
 }
 
 .tab-content {
-    padding: 10vh 0 0 0;
+    padding: 0 5vw;
 }
 
 section * :not(.tab) {

@@ -14,7 +14,9 @@ const resourcesToPrecache = [
     '/Merkblatt/',
     'index.html',
     'css/style.css',
-    'js/script.js'
+    'css/nav.css',
+    'js/script.js',
+    'js/navbar.js'
 ]
 const imagesToPrecache = [
     'pictures/htmlGrundstruktur.webp',
@@ -32,7 +34,9 @@ const imagesToPrecache = [
     'pictures/schrauben_html.webp',
     'pictures/schrauben_js.webp',
     'favicons/android-chrome-192x192.png',
-    'favicons/android-chrome-512x512.png'
+    'favicons/android-chrome-512x512.png',
+    'icons/close.svg',
+    'icons/menu.svg'
 ]
 
 self.addEventListener('install', event => {

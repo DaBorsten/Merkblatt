@@ -14,5 +14,9 @@ tabs.forEach(tab => {
     })
     tab.classList.add('active')
     target.classList.add('active')
-  })
+
+    if (screen.width <= 800) {
+    closeMenu()
+  }
+})
 })

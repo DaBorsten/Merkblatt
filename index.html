@@ -24,6 +24,7 @@
 
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -34,12 +35,17 @@
     </script>
 
     <script src="js/script.js" defer></script>
+    <script src="js/navbar.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Merkblatt</h1>
+    <div class="mobileTopBar">
+        <span class="websiteName">Merkblatt</span>
+    </div>
+    <button class="mobileMenu" data-active="false"></button>
 
+    <nav class="navbar" data-visible="false">
+        <span class="websiteName" id="websiteName">Merkblatt</span>
         <div class="tabs">
             <button data-tab-target="#htmlTab" class="active tab">HTML</button>
 
@@ -47,7 +53,7 @@
 
             <button data-tab-target="#aufgabenTab" class="tab">Aufgaben</button>
         </div>
-    </header>
+    </nav>
 
     <div class="tab-content">
         <section class="active" id="htmlTab" data-tab-content>
@@ -82,7 +88,8 @@
 
             <div class="contentSection">
                 <p>JavaScript gibt der Website Funktionen, mit denen man die Seite manipulieren/verändern kann.</p>
-                <img class="screenshots" src="pictures/JavaScriptVerlinken.webp" alt="JavaScript verlinken" loading="lazy">
+                <img class="screenshots" src="pictures/JavaScriptVerlinken.webp" alt="JavaScript verlinken"
+                    loading="lazy">
             </div>
 
             <div class="contentSection">
@@ -92,12 +99,14 @@
 
             <div class="contentSection">
                 <h3>Einfache Datentypen</h3>
-                <img class="screenshots" src="pictures/jsEinfacheDatentypen.webp" alt="Einfache Datentypen" loading="lazy">
+                <img class="screenshots" src="pictures/jsEinfacheDatentypen.webp" alt="Einfache Datentypen"
+                    loading="lazy">
             </div class="contentSection">
 
             <div class="contentSection">
                 <h3>Logische Operatoren</h3>
-                <img class="screenshotTable" src="pictures/logische Operatoren.webp" alt="logische Operatoren" loading="lazy">
+                <img class="screenshotTable" src="pictures/logische Operatoren.webp" alt="logische Operatoren"
+                    loading="lazy">
             </div>
 
             <div class="contentSection">
@@ -140,12 +149,14 @@
                 <br>
                 <div>
                     <p>HTML Teil</p>
-                    <img class="screenshots" src="pictures/BMI If Statements HTML Teil.webp" alt="BMI HTML" loading="lazy">
+                    <img class="screenshots" src="pictures/BMI If Statements HTML Teil.webp" alt="BMI HTML"
+                        loading="lazy">
                 </div>
 
                 <div>
                     <p>JavaScript Teil</p>
-                    <img class="screenshots" src="pictures/BMI If Statements JS Teil.webp" alt="BMI JavaScript" loading="lazy">
+                    <img class="screenshots" src="pictures/BMI If Statements JS Teil.webp" alt="BMI JavaScript"
+                        loading="lazy">
                 </div>
             </div>
 
@@ -156,8 +167,8 @@
                 <br>
                 <div>
                     <p>HTML Teil</p>
-                    <img class="screenshots" src="pictures/quadratische Gleichung HTML.webp" alt="Quadratische Gleichungen HTML"
-                        loading="lazy">
+                    <img class="screenshots" src="pictures/quadratische Gleichung HTML.webp"
+                        alt="Quadratische Gleichungen HTML" loading="lazy">
                 </div>
 
                 <div>
