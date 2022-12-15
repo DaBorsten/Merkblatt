@@ -13,6 +13,12 @@ mobileMenu.addEventListener('click', () => {
     }
 })
 
+window.addEventListener('orientationchange', () => {
+    if (screen.width > 800) {
+        closeMenu()
+    }
+})
+
 function openMenu() {
     navbar.setAttribute('data-visible', "true")
     mobileMenu.setAttribute('data-active', "true")
