@@ -81,6 +81,10 @@
     background-color: var(--buttonActive);
 }
 
+.tab-content {
+    padding-top: 100px;
+}
+
 @media (max-width: 800px) {
 
     .navbar {
@@ -122,10 +126,4 @@
         gap: 2em;
         width: 100%;
     }
-
-    .tab-content {
-        padding-top: 100px;
-    }
-
-
 }
