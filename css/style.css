@@ -9,9 +9,9 @@
     --headingColor: white;
     --paragraphColor: hsl(0, 0%, 70%);
 
-    --button: hsl(165, 100%, 30%);
-    --buttonHover: hsl(165, 100%, 40%);
-    --buttonActive: hsl(165, 100%, 20%);
+    --button: hsl(164, 100%, 20%);
+    --buttonHover: hsl(164, 100%, 25%);
+    --buttonActive: hsl(164, 100%, 15%);
 }
 
 * {
