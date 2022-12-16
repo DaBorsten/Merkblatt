@@ -10,8 +10,8 @@
     --paragraphColor: hsl(0, 0%, 70%);
 
     --button: hsl(164, 100%, 20%);
-    --buttonHover: hsl(164, 100%, 25%);
-    --buttonActive: hsl(164, 100%, 15%);
+    --buttonHover: hsl(164, 100%, 30%);
+    --buttonActive: hsl(164, 100%, 10%);
 }
 
 * {
@@ -38,7 +38,8 @@ body {
 }
 
 .tab-content {
-    padding: 0 5vw;
+    padding-inline: 5vw;
+    padding-top: 100px;
 }
 
 section * :not(.tab) {
@@ -79,15 +80,12 @@ img {
 }
 
 .screenshots {
-    min-width: 0%;
-    max-width: 100%;
-    height: auto;
+    max-width: 90vw;
     height: auto;
 }
 
 .screenshotTable {
-    min-width: 0%;
-    max-width: 90%;
+    max-width: 90vw;
     height: auto;
     padding-top: 5%;
     padding-bottom: 5vh;

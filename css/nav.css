@@ -4,11 +4,16 @@
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+    z-index: 999;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: .5em 2em;
+    padding-inline: 2em;
+    height: 70px;
 
     background-color: var(--button);
 }
@@ -16,11 +21,14 @@
 .mobileTopBar {
     position: fixed;
     top: 0;
+    inset-inline: 0;
+
     display: none;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 100vw;
+    padding-inline: 20px;
+    justify-content: flex-end;
+
+
     height: 70px;
     z-index: 1000;
 
@@ -29,9 +37,6 @@
 
 .mobileMenu {
     display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
     width: 30px;
     aspect-ratio: 1;
     background-color: transparent;
@@ -43,6 +48,7 @@
     border: none;
     padding: 0;
     z-index: 1001;
+    cursor: pointer;
 }
 
 .mobileMenu[data-active="true"] {
@@ -53,7 +59,7 @@
     color: white;
     font-size: 30px;
     vertical-align: middle;
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .tabs {
@@ -93,13 +99,9 @@
 @media (max-width: 800px) {
 
     .navbar {
-        position: fixed;
-        top: 70px;
-        inset-inline: 0;
+        top: 35px;
         height: 100dvh;
-        z-index: 999;
         justify-content: center;
-        align-items: center;
         transform: translateX(100%);
         transition: transform 350ms ease-out;
 
@@ -112,7 +114,7 @@
         transform: translateX(0%);
     }
 
-    #websiteName {
+    .websiteName {
         display: none;
     }
 
