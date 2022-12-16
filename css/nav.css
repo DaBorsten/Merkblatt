@@ -49,6 +49,7 @@
     padding: 0;
     z-index: 1001;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobileMenu[data-active="true"] {
