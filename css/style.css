@@ -50,6 +50,8 @@ body {
     z-index: 1000;
 
     background-color: var(--button);
+    -webkit-box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
 }
 
 .mobileMenu {
