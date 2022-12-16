@@ -24,7 +24,6 @@
 
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -35,7 +34,6 @@
     </script>
 
     <script src="js/script.js" defer></script>
-    <script src="js/navbar.js" defer></script>
 </head>
 
 <body>
@@ -44,13 +42,13 @@
     </div>
 
     <nav class="navbar" data-visible="false">
-        <span class="websiteName" id="websiteName">Merkblatt</span>
-        <div class="tabs">
-            <button data-tab-target="#htmlTab" class="active tab">HTML</button>
+        <span class="websiteName">Merkblatt</span>
+        <div class="btns">
+            <button data-tab-target="#htmlTab" class="active btn">HTML</button>
 
-            <button data-tab-target="#javaScriptTab" class="tab">JavaScript</button>
+            <button data-tab-target="#javaScriptTab" class="btn">JavaScript</button>
 
-            <button data-tab-target="#aufgabenTab" class="tab">Aufgaben</button>
+            <button data-tab-target="#aufgabenTab" class="btn">Aufgaben</button>
         </div>
     </nav>
 
@@ -118,10 +116,10 @@
         <section id="aufgabenTab" data-tab-content>
 
             <h2>Aufgaben</h2>
-            <div class="aufgabenListe tabs">
-                <button class="tab" onclick="location.href='#schraubenDiscount'">Schrauben-Discount</button>
-                <button class="tab" onclick="location.href='#BMI'">BMI-Rechner mit Bedingungen</button>
-                <button class="tab" onclick="location.href='#quadrGl'">Quadratische Gleichungen</button>
+            <div class="aufgabenListe btns">
+                <button class="btn aufgaben" onclick="location.href='#schraubenDiscount'">Schrauben-Discount</button>
+                <button class="btn aufgaben" onclick="location.href='#BMI'">BMI-Rechner mit Bedingungen</button>
+                <button class="btn aufgaben" onclick="location.href='#quadrGl'">Quadratische Gleichungen</button>
             </div>
 
             <div class="aufgabe" id="schraubenDiscount">
@@ -179,6 +177,8 @@
 
         </section>
     </div>
+
+    <button class="arrowUp"></button>
 
 </body>
 
