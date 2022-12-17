@@ -1,8 +1,8 @@
 :root {
-    --headingOne: 3.5rem;
-    --headingTwo: 2.7rem;
-    --headingThree: 2.3rem;
-    --paragraphFontSize: 1.4rem;
+    --headingOne: clamp(3rem, 10vw, 3.5rem);
+    --headingTwo: clamp(2rem, 10vw, 3.5rem);
+    --headingThree: clamp(1.7rem, 5vw, 2.4rem);
+    --paragraphFontSize: clamp(1.2rem, 3vw, 1.5rem);
     --buttonFontSize: 1.2rem;
 
     --backgroundColor: hsl(0, 0%, 0%);
@@ -136,8 +136,6 @@ section * :not(.btn) {
     position: relative;
     left: 50%;
     translate: -50%;
-
-    font-size: var(--paragraphFontSize);
 }
 
 .active[data-tab-content] {
@@ -235,13 +233,6 @@ img {
 }
 
 @media (max-width: 800px) {
-
-    :root {
-        --headingOne: 3rem;
-        --headingTwo: 2rem;
-        --headingThree: 2rem;
-        --paragraphFontSize: 1.2rem;
-    }
 
     .mobileTopBar {
         display: flex;
