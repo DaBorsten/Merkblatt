@@ -1,5 +1,4 @@
 :root {
-    --headingOne: clamp(3rem, 10vw, 3.5rem);
     --headingTwo: clamp(2rem, 10vw, 3.5rem);
     --headingThree: clamp(1.7rem, 5vw, 2.4rem);
     --paragraphFontSize: clamp(1.2rem, 3vw, 1.5rem);
