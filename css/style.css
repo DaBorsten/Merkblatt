@@ -87,6 +87,7 @@ body {
     height: 70px;
 
     background-color: var(--button);
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
 }
 
 .websiteName {
@@ -253,6 +254,7 @@ img {
         background-color: rgba(50, 50, 50, 0.2);
         -webkit-backdrop-filter: blur(1rem);
         backdrop-filter: blur(2rem);
+        box-shadow: none;
     }
 
     .navbar[data-visible="true"] {
