@@ -7,6 +7,8 @@
 
     --backgroundColor: hsl(0, 0%, 13%);
 
+    --settingsSection: hsl(0, 0%, 17%);
+
     --headingColor: white;
     --paragraphColor: hsl(0, 0%, 80%);
 
@@ -19,10 +21,8 @@
 
     --primaryColor: hsl(var(--h), var(--s), var(--l));
 
-    /* --button: hsl(var(--h), var(--s), var(--l)); */
     --button: hsl(0, 0%, 20%);
 
-    /* --buttonHover: hsl(var(--h), var(--s), calc(var(--l) + 5%)); */
     --buttonHover: hsl(0, 0%, 24%);
 
     --buttonActive: hsl(0, 0%, 16%);
@@ -119,7 +119,7 @@ body::-webkit-scrollbar {
     padding-top: 100px;
     inset: 0 0 0 0;
     z-index: 1000;
-    background-color: hsl(0, 0%, 13%);
+    background-color: var(--backgroundColor);
     overflow: auto;
 }
 
@@ -156,7 +156,7 @@ body::-webkit-scrollbar {
     padding: 15px;
     gap: 10px;
     border-radius: var(--borderRadiusSmall);
-    background-color: hsl(0, 0%, 17%);
+    background-color: var(--settingsSection);
 }
 
 .mobileMenu {
