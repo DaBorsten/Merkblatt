@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 const cacheName = 'cache-v1'
 const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
-    '/',
+    '/Merkblatt/',
     'index.html',
 /*     '/css/style.css',
     '/js/script.js',
