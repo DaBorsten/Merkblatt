@@ -78,9 +78,9 @@ body::-webkit-scrollbar {
     background-color: var(--primaryColor);
     box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .settingsIcon {
@@ -208,7 +208,7 @@ body::-webkit-scrollbar {
     background-color: var(--mobileMenuFucus);
 }
 
-.mobileMenu[data-active="true"] > .mobileMenuIcon {
+.mobileMenu[data-active="true"]>.mobileMenuIcon {
     background-image: url(../icons/close.svg);
 }
 
@@ -223,9 +223,9 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     padding-block: 4px;
     -webkit-padding-start: 24px;
-            padding-inline-start: 24px;
+    padding-inline-start: 24px;
     -webkit-padding-end: 8px;
-            padding-inline-end: 8px;
+    padding-inline-end: 8px;
     height: 56px;
 
     background-color: var(--primaryColor);
@@ -259,9 +259,9 @@ body::-webkit-scrollbar {
     color: white;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     vertical-align: middle;
     user-select: none;
 
@@ -289,7 +289,7 @@ body::-webkit-scrollbar {
 section * :not(.btn) {
     position: relative;
     left: 50%;
-    translate: -50%;
+    transform: translate(-50%);
 }
 
 .active[data-tab-content] {
@@ -347,9 +347,9 @@ label {
 }
 
 input[type="color"] {
-    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     width: 40px;
     height: 40px;
     border: none;
@@ -364,10 +364,20 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
+input[type="color"]::-moz-color-swatch-wrapper {
+    padding: 0;
+}
+
 input[type="color"]::-webkit-color-swatch {
     border-radius: var(--borderRadius);
     border: none;
 }
+
+input[type="color"]::-moz-color-swatch {
+    border-radius: var(--borderRadius);
+    border: none;
+}
+
 
 .switch {
     display: inline-block;
@@ -430,9 +440,9 @@ input:checked+.slider:before {
     color: white;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     border-right: 12px solid transparent;
 
     -webkit-tap-highlight-color: transparent;
@@ -535,7 +545,7 @@ input:checked+.slider:before {
         width: 100%;
     }
 
-    .navbar > .btns {
+    .navbar>.btns {
         padding-top: 64px;
     }
 
