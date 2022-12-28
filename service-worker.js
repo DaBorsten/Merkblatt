@@ -13,12 +13,12 @@ const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
     '/Merkblatt/',
     'index.html',
-/*     '/css/style.css',
+    '/css/style.css',
     '/js/script.js',
-    'webmanifest.json' */
+    'webmanifest.json'
 ]
 const imagesToPrecache = [
-/*     '/pictures/htmlTags.webp',
+    '/pictures/htmlTags.webp',
     '/pictures/htmlGrundstruktur.webp',
     '/pictures/tabelle.webp',
     '/pictures/BMI If Statements HTML Teil.webp',
@@ -41,7 +41,7 @@ const imagesToPrecache = [
     '/icons/close.svg',
     '/icons/menu.svg',
     '/icons/arrow-up.svg',
-    '/icons/settings.svg', */
+    '/icons/settings.svg'
 ]
 
 self.addEventListener('install', event => {
