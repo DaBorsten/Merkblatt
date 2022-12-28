@@ -4,12 +4,13 @@
 <head>
     <link rel="preload" as="style" href="css/style.css">
     <link rel="stylesheet" href="css/style.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Merkblatt für HTML und JavaScript">
     <meta name="author" content="Boas Rautmann">
-    <title>Merkblatt</title>    
+    <title>Merkblatt</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -40,25 +41,78 @@
 
 <body>
     <div class="mobileTopBar">
-        <button class="mobileMenu" data-active="false" aria-label="Navigation"></button>
+        <div class="mobileMenuRoundBackground">
+            <button class="settingsMenu settingsIcon" aria-label="Settings" data-top-bar-name="Einstellungen"></button>
+        </div>
+
+        <h3 id="siteName"></h3>
+
+        <div class="mobileMenuRoundBackground">
+            <button class="mobileMenu" data-active="false" aria-label="Navigation"></button>
+        </div>
+    </div>
+
+    <div class="settingsContent" data-visible="false">
+        <div class="settings">
+            <div class="settingsCategory">
+                <h4>Darstellung</h4>
+                <div class="settingSection">
+                    <label for="primary-color">Primärfarbe</label>
+                    <input type="color" name="primary-color" id="primary-color">
+                </div>
+
+                <div class="settingSection">
+                    <label for="back-to-top-checkbox">Back-To-Top Button</label>
+                    <label for="back-to-top-checkbox" class="switch">
+                        <input type="checkbox" name="back-to-top-checkbox" id="back-to-top-checkbox">
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+
+                <div class="settingSection">
+                    <label for="smooth-scrolling-checkbox">Smooth Scrolling</label>
+                    <label for="smooth-scrolling-checkbox" class="switch">
+                        <input type="checkbox" name="smooth-scrolling-checkbox" id="smooth-scrolling-checkbox">
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settingsCategory">
+                <h4>Startseite</h4>
+                <div class="settingSection">
+                    <label for="defaultLandingpageSelect">Startseite</label>
+                    <select name="Standard Landingpage" id="defaultLandingpageSelect" class="select">
+                        <option value="html" data-tab-target="#htmlTab">HTML</option>
+                        <option value="javascript" data-tab-target="#javaScriptTab">JavaScript</option>
+                        <option value="aufgaben" data-tab-target="#aufgabenTab">Aufgaben</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 
     <nav class="navbar" data-visible="false">
-        <span class="websiteName">Merkblatt</span>
+        <span class="websiteName hideOnMobile">Merkblatt</span>
         <div class="btns">
-            <button data-tab-target="#htmlTab" class="active btn">HTML</button>
+            <button data-tab-target="#htmlTab" id="html" data-top-bar-name="HTML" class="btn">HTML</button>
 
-            <button data-tab-target="#javaScriptTab" class="btn">JavaScript</button>
+            <button data-tab-target="#javaScriptTab" id="javascript" data-top-bar-name="JavaScript"
+                class="btn">JavaScript</button>
 
-            <button data-tab-target="#aufgabenTab" class="btn">Aufgaben</button>
+            <button data-tab-target="#aufgabenTab" id="aufgaben" data-top-bar-name="Aufgaben"
+                class="btn">Aufgaben</button>
+
+            <div class="mobileMenuRoundBackground hideOnMobile">
+                <button class="settingsMenu settingsIcon" aria-label="Settings"
+                    data-top-bar-name="Einstellungen"></button>
+            </div>
+
         </div>
     </nav>
 
     <div class="tab-content">
-        <section class="active" id="htmlTab" data-tab-content>
-
-            <h2>HTML</h2>
-
+        <section class="html" id="htmlTab" data-tab-content>
             <div>
                 <p>HTML ist das "Gerüst" einer Webseite. Dazu zählen beispielsweise Überschriften, Text, Buttons und
                     Eingabefelder.</p>
@@ -81,13 +135,10 @@
                 <img class="screenshots" src="pictures/tabelle.webp" alt="Tabelle" loading="lazy" width="1520"
                     height="1924">
             </div>
-
         </section>
 
-        <section id="javaScriptTab" data-tab-content>
 
-            <h2>JavaScript</h2>
-
+        <section class="javascript" id="javaScriptTab" data-tab-content>
             <div class="contentSection">
                 <p>JavaScript gibt der Website Funktionen, mit denen man die Seite manipulieren/verändern kann.</p>
                 <img class="screenshots" src="pictures/JavaScriptVerlinken.webp" alt="JavaScript verlinken"
@@ -96,7 +147,8 @@
 
             <div class="contentSection">
                 <h3>Variablen</h3>
-                <img class="screenshots" src="pictures/jsVariablen.webp" alt="JavaScript Variablen" loading="lazy" width="1520" height="862">
+                <img class="screenshots" src="pictures/jsVariablen.webp" alt="JavaScript Variablen" loading="lazy"
+                    width="1520" height="862">
             </div>
 
             <div class="contentSection">
@@ -113,18 +165,25 @@
 
             <div class="contentSection">
                 <h3>if else (Bedingungen)</h3>
-                <img class="screenshots" src="pictures/if else.webp" alt="if else" loading="lazy" width="1520" height="748">
+                <img class="screenshots" src="pictures/if else.webp" alt="if else" loading="lazy" width="1520"
+                    height="748">
             </div>
 
+            <div class="contentSection">
+                <h3>lokale vs. globale Variablen</h3>
+
+                <img class="screenshots" src="pictures/locale_globale_var.webp" alt="lokale/globale Variablen"
+                    loading="lazy" width="1520" height="1812">
+            </div>
         </section>
 
-        <section id="aufgabenTab" data-tab-content>
 
-            <h2>Aufgaben</h2>
+        <section class="aufgaben" id="aufgabenTab" data-tab-content>
             <div class="aufgabenListe btns">
                 <button class="btn aufgaben" onclick="location.href='#schraubenDiscount'">Schrauben-Discount</button>
                 <button class="btn aufgaben" onclick="location.href='#BMI'">BMI-Rechner mit Bedingungen</button>
                 <button class="btn aufgaben" onclick="location.href='#quadrGl'">Quadratische Gleichungen</button>
+                <button class="btn aufgaben" onclick="location.href='#zahlenraten'">Zahlenraten</button>
             </div>
 
             <div class="aufgabe" id="schraubenDiscount">
@@ -135,12 +194,14 @@
                 <br>
                 <div>
                     <p>HTML Teil</p>
-                    <img class="screenshots" src="pictures/schrauben_html.webp" alt="Schrauben HTML" loading="lazy" width="1520" height="1166">
+                    <img class="screenshots" src="pictures/schrauben_html.webp" alt="Schrauben HTML" loading="lazy"
+                        width="1520" height="1166">
                 </div>
 
                 <div>
                     <p>JavaScript Teil</p>
-                    <img class="screenshots" src="pictures/schrauben_js.webp" alt="Schrauben JavaScript" loading="lazy" width="1520" height="1090">
+                    <img class="screenshots" src="pictures/schrauben_js.webp" alt="Schrauben JavaScript" loading="lazy"
+                        width="1520" height="1090">
                 </div>
             </div>
 
@@ -180,6 +241,23 @@
                 </div>
             </div>
 
+            <div class="aufgabe" id="zahlenraten">
+                <h3>Beispiel: Zahlenraten</h3>
+
+                <p>Programm, bei dem man eine zufällig generierte Zahl erraten kann.</p>
+                <br>
+                <div>
+                    <p>HTML Teil</p>
+                    <img class="screenshots" src="pictures/quadratische Gleichung HTML.webp" alt="Zahlenraten HTML"
+                        loading="lazy" width="1520" height="1128">
+                </div>
+
+                <div>
+                    <p>JavaScript Teil</p>
+                    <img class="screenshots" src="pictures/quadratische Gleichung JS.webp" alt="Zahlenraten JavaScript"
+                        loading="lazy" width="1520" height="1660">
+                </div>
+            </div>
         </section>
     </div>
 

@@ -1,7 +1,7 @@
 
 // Registriere die Funktion als Dienstarbeiter
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
+    navigator.serviceWorker.register('service-worker.js', { scope: "/" })
         .then(registration => {
             // Rufe die Funktion alle 24 Stunden auf
             setInterval(deleteUnusedCache, 86400000);
@@ -11,31 +11,37 @@ if ('serviceWorker' in navigator) {
 const cacheName = 'cache-v1'
 const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
-    '/Merkblatt/',
+    '/',
     'index.html',
-    'css/style.css',
-    'js/script.js'
+    '/css/style.css',
+    '/js/script.js',
+    'webmanifest.json'
 ]
 const imagesToPrecache = [
-    'pictures/htmlGrundstruktur.webp',
-    'pictures/htmlTags.webp',
-    'pictures/tabelle.webp',
-    'pictures/BMI If Statements HTML Teil.webp',
-    'pictures/BMI If Statements JS Teil.webp',
-    'pictures/if else.webp',
-    'pictures/JavaScriptVerlinken.webp',
-    'pictures/jsEinfacheDatentypen.webp',
-    'pictures/jsVariablen.webp',
-    'pictures/logische Operatoren.webp',
-    'pictures/quadratische Gleichung HTML.webp',
-    'pictures/quadratische Gleichung JS.webp',
-    'pictures/schrauben_html.webp',
-    'pictures/schrauben_js.webp',
-    'favicons/android-chrome-192x192.png',
-    'favicons/android-chrome-512x512.png',
-    'icons/close.svg',
-    'icons/menu.svg',
-    'icons/arrow-up.svg'
+    '/pictures/htmlTags.webp',
+    '/pictures/htmlGrundstruktur.webp',
+    '/pictures/tabelle.webp',
+    '/pictures/BMI If Statements HTML Teil.webp',
+    '/pictures/BMI If Statements JS Teil.webp',
+    '/pictures/if else.webp',
+    '/pictures/JavaScriptVerlinken.webp',
+    '/pictures/jsEinfacheDatentypen.webp',
+    '/pictures/jsVariablen.webp',
+    '/pictures/logische Operatoren.webp',
+    '/pictures/quadratische Gleichung HTML.webp',
+    '/pictures/quadratische Gleichung JS.webp',
+    '/pictures/schrauben_html.webp',
+    '/pictures/schrauben_js.webp',
+    '/pictures/locale_globale_var.webp',
+    '/favicons/favicon.ico',
+    '/favicons/favicon-16x16.png',
+    '/favicons/favicon-32x32.png',
+    '/favicons/android-chrome-192x192.png',
+    '/favicons/android-chrome-512x512.png',
+    '/icons/close.svg',
+    '/icons/menu.svg',
+    '/icons/arrow-up.svg',
+    '/icons/settings.svg',
 ]
 
 self.addEventListener('install', event => {
