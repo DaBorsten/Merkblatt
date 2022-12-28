@@ -41,15 +41,15 @@
 
 <body>
     <div class="mobileTopBar">
-        <div class="mobileMenuRoundBackground">
-            <button class="settingsMenu settingsIcon" aria-label="Settings" data-top-bar-name="Einstellungen"></button>
-        </div>
+        <button class="settingsMenu mobileMenuRoundBackground" aria-label="Settings">
+            <div class="settingsIcon"></div>
+        </button>
 
         <h3 id="siteName"></h3>
 
-        <div class="mobileMenuRoundBackground">
-            <button class="mobileMenu" data-active="false" aria-label="Navigation"></button>
-        </div>
+        <button class="mobileMenu mobileMenuRoundBackground" data-active="false" aria-label="Navigation">
+            <div class="mobileMenuIcon"></div>
+        </button>
     </div>
 
     <div class="settingsContent" data-visible="false">
@@ -103,10 +103,9 @@
             <button data-tab-target="#aufgabenTab" id="aufgaben" data-top-bar-name="Aufgaben"
                 class="btn">Aufgaben</button>
 
-            <div class="mobileMenuRoundBackground hideOnMobile">
-                <button class="settingsMenu settingsIcon" aria-label="Settings"
-                    data-top-bar-name="Einstellungen"></button>
-            </div>
+            <button class="settingsMenu mobileMenuRoundBackground hideOnMobile" aria-label="Settings">
+                <div class=" settingsIcon"></div>
+            </button>
 
         </div>
     </nav>
