@@ -5,10 +5,10 @@
     --paragraphFontSize: clamp(1.2rem, 3vw, 1.5rem);
     --buttonFontSize: 1.2rem;
 
-    --backgroundColor: hsl(0, 0%, 0%);
+    --backgroundColor: hsl(0, 0%, 13%);
 
     --headingColor: white;
-    --paragraphColor: hsl(0, 0%, 70%);
+    --paragraphColor: hsl(0, 0%, 80%);
 
     --h: 164;
     /* Hue */
@@ -19,13 +19,19 @@
 
     --primaryColor: hsl(var(--h), var(--s), var(--l));
 
-    --button: hsl(var(--h), var(--s), var(--l));
-    --buttonHover: hsl(var(--h), var(--s), calc(var(--l) + 5%));
-    --buttonActive: hsl(var(--h), var(--s), calc(var(--l) - 10%));
+    /* --button: hsl(var(--h), var(--s), var(--l)); */
+    --button: hsl(0, 0%, 20%);
 
-    --mobileMenuFucus: hsl(var(--h), var(--s), calc(var(--l) - 5%));
+    /* --buttonHover: hsl(var(--h), var(--s), calc(var(--l) + 5%)); */
+    --buttonHover: hsl(0, 0%, 24%);
 
-    --borderRadius: .5rem;
+    --buttonActive: hsl(0, 0%, 16%);
+    --buttonClicked: hsl(var(--h), var(--s), calc(var(--l) - 10%));
+
+    --mobileMenuFucus: hsl(var(--h), var(--s), calc(var(--l) - 10%));
+
+    --borderRadiusBig: 8px;
+    --borderRadiusSmall: 4px;
 }
 
 * {
@@ -76,7 +82,7 @@ body::-webkit-scrollbar {
     z-index: 1001;
 
     background-color: var(--primaryColor);
-    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 30px 15px hsla(0, 0%, 7%, 0.7);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -113,7 +119,7 @@ body::-webkit-scrollbar {
     padding-top: 100px;
     inset: 0 0 0 0;
     z-index: 1000;
-    background-color: hsl(0, 0%, 12%);
+    background-color: hsl(0, 0%, 13%);
     overflow: auto;
 }
 
@@ -134,7 +140,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     padding-bottom: 30px;
     border-bottom: 1px solid white;
-    gap: 15px;
+    gap: 5px;
 }
 
 .settingsCategory:last-of-type {
@@ -149,8 +155,8 @@ body::-webkit-scrollbar {
     align-items: center;
     padding: 15px;
     gap: 10px;
-    border-radius: var(--borderRadius);
-    background-color: hsl(0, 0%, 20%);
+    border-radius: var(--borderRadiusSmall);
+    background-color: hsl(0, 0%, 17%);
 }
 
 .mobileMenu {
@@ -221,15 +227,14 @@ body::-webkit-scrollbar {
     flex-direction: row;
     vertical-align: middle;
     justify-content: space-between;
-    padding-block: 4px;
     -webkit-padding-start: 24px;
     padding-inline-start: 24px;
-    -webkit-padding-end: 8px;
-    padding-inline-end: 8px;
+    -webkit-padding-end: 24px;
+    padding-inline-end: 24px;
     height: 56px;
 
     background-color: var(--primaryColor);
-    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 30px 15px hsla(0, 0%, 7%, 0.7);
     overflow: auto;
 }
 
@@ -246,7 +251,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    gap: 5vw;
+    gap: 8px;
 }
 
 .btn {
@@ -254,7 +259,7 @@ body::-webkit-scrollbar {
     padding-block: 15px;
     padding-inline: 30px;
     border: none;
-    border-radius: var(--borderRadius);
+    border-radius: var(--borderRadiusBig);
     background-color: var(--button);
     color: white;
     cursor: pointer;
@@ -273,12 +278,11 @@ body::-webkit-scrollbar {
 }
 
 .btn:active {
-    transform: scale(0.95);
     background-color: var(--buttonActive);
 }
 
 .btn.active {
-    background-color: var(--buttonActive);
+    background-color: var(--buttonClicked);
 }
 
 .tab-content {
@@ -350,8 +354,8 @@ input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -369,21 +373,21 @@ input[type="color"]::-moz-color-swatch-wrapper {
 }
 
 input[type="color"]::-webkit-color-swatch {
-    border-radius: var(--borderRadius);
-    border: none;
+    border-radius: var(--borderRadiusBig);
+    border: 2px solid var(--primaryColor);
 }
 
 input[type="color"]::-moz-color-swatch {
-    border-radius: var(--borderRadius);
-    border: none;
+    border-radius: var(--borderRadiusBig);
+    border: 2px solid var(--primaryColor);
 }
 
 
 .switch {
     display: inline-block;
-    height: 34px;
+    height: 22px;
     position: relative;
-    width: 60px;
+    width: 44px;
 }
 
 .switch input {
@@ -391,35 +395,41 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .slider {
-    background-color: hsl(0, 0%, 12%);
+    background-color: hsl(0, 0%, 15%);
     bottom: 0;
     cursor: pointer;
-    left: 0;
     position: absolute;
     right: 0;
-    top: 0;
     transition: .4s;
-    width: 60px;
+    height: 20px;
+    width: 40px;
+    border: 2px solid hsl(0, 0%, 48%);
+}
+
+.slider:hover {
+    background-color: hsl(0, 0%, 20%);
 }
 
 .slider:before {
-    background-color: #fff;
-    bottom: 4px;
+    background-color: hsl(0, 0%, 81%);
+    bottom: 2px;
     content: "";
-    height: 26px;
-    left: 4px;
+    height: 16px;
+    left: 2px;
     position: absolute;
     transition: .4s;
-    width: 26px;
+    width: 16px;
 }
 
 input:checked+.slider {
     background-color: var(--primaryColor);
     -webkit-tap-highlight-color: transparent;
+    border: 2px solid var(--primaryColor);
 }
 
 input:checked+.slider:before {
-    transform: translateX(26px);
+    transform: translateX(20px);
+    background-color: hsl(0, 0%, 0%);
 }
 
 .slider.round {
@@ -435,7 +445,7 @@ input:checked+.slider:before {
     padding-inline: 12px;
     font-size: var(--paragraphFontSize);
     border: none;
-    border-radius: var(--borderRadius);
+    border-radius: var(--borderRadiusBig);
     background-color: hsl(0, 0%, 12%);
     color: white;
     cursor: pointer;
@@ -446,11 +456,7 @@ input:checked+.slider:before {
     border-right: 12px solid transparent;
 
     -webkit-tap-highlight-color: transparent;
-}
-
-.select:focus,
-.select:hover {
-    outline: 1px solid var(--primaryColor);
+    outline: none;
 }
 
 .screenshots {
@@ -525,14 +531,14 @@ input:checked+.slider:before {
         inset-inline: unset;
         inset: 0 0 0 30vw;
 
-        background-color: hsl(0, 0%, 12%);
+        background-color: hsl(0, 0%, 13%);
         box-shadow: none;
         z-index: 999;
     }
 
     .navbar[data-visible="true"] {
         transform: translateX(0%);
-        box-shadow: -20px 0px 20px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: -20px 0px 20px 0px hsla(0, 0%, 7%, 0.7);
     }
 
     .hideOnMobile {
@@ -541,7 +547,7 @@ input:checked+.slider:before {
 
     .btns {
         flex-direction: column;
-        gap: 2em;
+        gap: 8px;
         width: 100%;
     }
 
