@@ -155,7 +155,6 @@ body::-webkit-scrollbar {
 
 .mobileMenu {
     display: none;
-    margin: 12px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -166,6 +165,10 @@ body::-webkit-scrollbar {
     z-index: 1002;
     -webkit-tap-highlight-color: transparent;
     vertical-align: middle;
+}
+
+.settingsMenu {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobileMenuIcon {
@@ -261,6 +264,8 @@ body::-webkit-scrollbar {
             user-select: none;
     vertical-align: middle;
     user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover {
@@ -351,6 +356,8 @@ input[type="color"] {
     cursor: pointer;
     background-color: transparent;
     padding: 0;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -398,6 +405,7 @@ input[type="color"]::-webkit-color-swatch {
 
 input:checked+.slider {
     background-color: var(--primaryColor);
+    -webkit-tap-highlight-color: transparent;
 }
 
 input:checked+.slider:before {
@@ -426,6 +434,8 @@ input:checked+.slider:before {
         -ms-user-select: none;
             user-select: none;
     border-right: 12px solid transparent;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .select:focus,
