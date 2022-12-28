@@ -12,10 +12,10 @@ const cacheName = 'cache-v1'
 const cacheNameImages = 'cache-images-v1'
 const resourcesToPrecache = [
     '/Merkblatt/',
-    'index.html',
+    '/index.html',
     '/css/style.css',
     '/js/script.js',
-    'webmanifest.json'
+    '/webmanifest.json'
 ]
 const imagesToPrecache = [
     '/pictures/htmlTags.webp',
