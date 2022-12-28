@@ -75,7 +75,10 @@ body::-webkit-scrollbar {
 
     background-color: var(--button);
     box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.7);
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .settingsIcon {
@@ -194,8 +197,10 @@ body::-webkit-scrollbar {
     vertical-align: middle;
     justify-content: space-between;
     padding-block: 4px;
-    padding-inline-start: 24px;
-    padding-inline-end: 8px;
+    -webkit-padding-start: 24px;
+            padding-inline-start: 24px;
+    -webkit-padding-end: 8px;
+            padding-inline-end: 8px;
     height: 56px;
 
     background-color: var(--button);
@@ -228,7 +233,10 @@ body::-webkit-scrollbar {
     background-color: var(--button);
     color: white;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     vertical-align: middle;
     user-select: none;
 }
@@ -391,7 +399,10 @@ input:checked+.slider:before {
     background-color: hsl(0, 0%, 12%);
     color: white;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     border-right: 12px solid transparent;
 }
 
