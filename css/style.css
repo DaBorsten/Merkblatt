@@ -583,7 +583,7 @@ input:checked+.slider:before {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    align-items: center;
+    align-items: flex-end;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
