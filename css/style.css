@@ -1,16 +1,45 @@
 :root {
-    --headingTwo: clamp(2rem, 10vw, 3.5rem);
-    --headingThree: clamp(1.7rem, 5vw, 2.4rem);
-    --headingFour: clamp(1.2rem, 3vw, 1.5rem);
-    --paragraphFontSize: clamp(1.2rem, 3vw, 1.5rem);
-    --buttonFontSize: 1.2rem;
+    /* Font Sizes */
+    /* Document */
+    --headingOneFontSize: 1.875rem;
+    --headingTwoFontSize: 2.25rem;
+    --headingThreeFontSize: 1.75rem;
+
+    --paragraphFontSize: 1.25rem;
+
+    --buttonFontSize: 1.125rem;
+
+    /* Settings */
+    --settingsCategoryHeadingSize: 1.25rem;
+    --settingsCategoryHeadingWeight: bold;
+    --settingsCategoryHeadingColor: hsl(0, 0%, 90%);
+
+    --settingsLabelFontSize: 1.125rem;
+    --settingsLabelFontColor: hsl(0, 0%, 80%);
+
+
+    /* Colors */
 
     --backgroundColor: hsl(0, 0%, 13%);
 
     --settingsSection: hsl(0, 0%, 17%);
 
-    --headingColor: white;
+    --headingOneColor: hsl(0, 0%, 100%);
+
+    --headingTwoColor: hsl(0, 0%, 95%);
+
+    --headingThreeColor: hsl(0, 0%, 90%);
+
     --paragraphColor: hsl(0, 0%, 80%);
+
+    --button: hsl(0, 0%, 20%);
+
+    --buttonHover: hsl(0, 0%, 24%);
+
+    --buttonActive: hsl(0, 0%, 16%);
+
+
+    /* Custom Color */
 
     --h: 164;
     /* Hue */
@@ -21,16 +50,15 @@
 
     --primaryColor: hsl(var(--h), var(--s), var(--l));
 
-    --button: hsl(0, 0%, 20%);
-
-    --buttonHover: hsl(0, 0%, 24%);
-
-    --buttonActive: hsl(0, 0%, 16%);
     --buttonClicked: hsl(var(--h), var(--s), calc(var(--l) - 10%));
 
     --mobileMenuFucus: hsl(var(--h), var(--s), calc(var(--l) - 10%));
 
+
+    /* Border Radius */
+
     --borderRadiusBig: 8px;
+
     --borderRadiusSmall: 4px;
 }
 
@@ -139,13 +167,25 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--settingsLabelFontColor);
     gap: 5px;
 }
 
 .settingsCategory:last-of-type {
     padding-bottom: 150px;
     border-bottom: none;
+}
+
+.settingsCategoryHeading {
+    text-align: left;
+    font-size: var(--settingsCategoryHeadingSize);
+    font-weight: var(--settingsCategoryHeadingWeight);
+    color: var(--settingsCategoryHeadingColor);
+}
+
+.settingsLabel {
+    font-size: var(--settingsLabelFontSize);
+    color: var(--settingsLabelFontColor);
 }
 
 .settingSection {
@@ -317,22 +357,22 @@ section * :not(.btn) {
     padding-bottom: 0;
 }
 
+h1 {
+    text-align: center;
+    font-size: var(--headingOneFontSize);
+    color: var(--headingOneColor);
+}
+
 h2 {
     text-align: center;
-    font-size: var(--headingTwo);
-    color: var(--headingColor);
+    font-size: var(--headingTwoFontSize);
+    color: var(--headingTwoColor);
 }
 
 h3 {
     text-align: center;
-    font-size: var(--headingThree);
-    color: var(--headingColor);
-}
-
-h4 {
-    font-size: var(--headingFour);
-    color: var(--headingColor);
-    margin-block: 10px;
+    font-size: var(--headingThreeFontSize);
+    color: var(--headingThreeColor);
 }
 
 p {
@@ -514,6 +554,13 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 768px) {
+
+    :root {
+        --headingTwoFontSize: 1.563rem;
+        --headingThreeFontSize: 1.25rem;
+    
+        --paragraphFontSize: 1.125rem;
+    }
 
     .mobileTopBar {
         display: flex;

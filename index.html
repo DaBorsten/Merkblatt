@@ -45,7 +45,7 @@
             <div class="settingsIcon"></div>
         </button>
 
-        <h3 id="siteName"></h3>
+        <h1 id="siteName"></h1>
 
         <button class="mobileMenu mobileMenuRoundBackground" data-active="false" aria-label="Navigationsmenü">
             <div class="mobileMenuIcon"></div>
@@ -55,14 +55,14 @@
     <div class="settingsContent" data-visible="false">
         <div class="settings">
             <div class="settingsCategory">
-                <h4>Darstellung</h4>
+                <p class="settingsCategoryHeading">Darstellung</p>
                 <div class="settingSection">
-                    <label for="primary-color">Primärfarbe</label>
+                    <label for="primary-color" class="settingsLabel">Primärfarbe</label>
                     <input type="color" name="primary-color" id="primary-color">
                 </div>
 
                 <div class="settingSection">
-                    <label for="back-to-top-checkbox">Back-To-Top Button</label>
+                    <label for="back-to-top-checkbox" class="settingsLabel">Back-To-Top Button</label>
                     <label for="back-to-top-checkbox" class="switch">
                         <input type="checkbox" name="back-to-top-checkbox" id="back-to-top-checkbox">
                         <div class="slider round"></div>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="settingSection">
-                    <label for="smooth-scrolling-checkbox">Smooth Scrolling</label>
+                    <label for="smooth-scrolling-checkbox" class="settingsLabel">Smooth Scrolling</label>
                     <label for="smooth-scrolling-checkbox" class="switch">
                         <input type="checkbox" name="smooth-scrolling-checkbox" id="smooth-scrolling-checkbox">
                         <div class="slider round"></div>
@@ -79,9 +79,9 @@
             </div>
 
             <div class="settingsCategory">
-                <h4>Startseite</h4>
+                <p class="settingsCategoryHeading">Startseite</p>
                 <div class="settingSection">
-                    <label for="defaultLandingpageSelect">Startseite</label>
+                    <label for="defaultLandingpageSelect" class="settingsLabel">Startseite</label>
                     <select name="Standard Landingpage" id="defaultLandingpageSelect" class="select">
                         <option value="html" data-tab-target="#htmlTab">HTML</option>
                         <option value="javascript" data-tab-target="#javaScriptTab">JavaScript</option>
@@ -144,31 +144,31 @@
             </div>
 
             <div class="contentSection">
-                <h3>Variablen</h3>
+                <h2>Variablen</h2>
                 <img class="screenshots" src="pictures/jsVariablen.webp" alt="JavaScript Variablen" loading="lazy"
                     width="1520" height="862">
             </div>
 
             <div class="contentSection">
-                <h3>Einfache Datentypen</h3>
+                <h2>Einfache Datentypen</h2>
                 <img class="screenshots" src="pictures/jsEinfacheDatentypen.webp" alt="Einfache Datentypen"
                     loading="lazy" width="1520" height="862">
             </div>
 
             <div class="contentSection">
-                <h3>Logische Operatoren</h3>
+                <h2>Logische Operatoren</h2>
                 <img class="screenshotTable" src="pictures/logische Operatoren.webp" alt="logische Operatoren"
                     loading="lazy" width="560" height="630">
             </div>
 
             <div class="contentSection">
-                <h3>if else (Bedingungen)</h3>
+                <h2>if else (Bedingungen)</h2>
                 <img class="screenshots" src="pictures/if else.webp" alt="if else" loading="lazy" width="1520"
                     height="748">
             </div>
 
             <div class="contentSection">
-                <h3>lokale vs. globale Variablen</h3>
+                <h2>lokale vs. globale Variablen</h2>
 
                 <img class="screenshots" src="pictures/locale_globale_var.webp" alt="lokale/globale Variablen"
                     loading="lazy" width="1520" height="1812">
@@ -185,73 +185,73 @@
             </div>
 
             <div class="aufgabe" id="schraubenDiscount">
-                <h3>Beispiel: Schrauben-Discount</h3>
+                <h2>Beispiel: Schrauben-Discount</h2>
 
                 <p>Hier findet ihr den allgemeinen Aufbau von der "Schrauben-Discount" Aufgabe.<br>
                     Hierbei wurden die Aufgaben zwecks der Übersichtlichkeit nur in simpelster Form umgesetzt.</p>
                 <br>
                 <div>
-                    <p>HTML Teil</p>
+                    <h3>HTML Teil</h3>
                     <img class="screenshots" src="pictures/schrauben_html.webp" alt="Schrauben HTML" width="1520"
                         height="1166">
                 </div>
 
                 <div>
-                    <p>JavaScript Teil</p>
+                    <h3>JavaScript Teil</h3>
                     <img class="screenshots" src="pictures/schrauben_js.webp" alt="Schrauben JavaScript" loading="lazy"
                         width="1520" height="1090">
                 </div>
             </div>
 
             <div class="aufgabe" id="BMI">
-                <h3>Beispiel: BMI-Rechner mit Bedingungen</h3>
+                <h2>Beispiel: BMI-Rechner mit Bedingungen</h2>
 
                 <p>BMI-Rechner mit Bedingungen für Einstufung der WHO.</p>
                 <br>
                 <div>
-                    <p>HTML Teil</p>
+                    <h3>HTML Teil</h3>
                     <img class="screenshots" src="pictures/BMI If Statements HTML Teil.webp" alt="BMI HTML"
                         loading="lazy" width="1520" height="1356">
                 </div>
 
                 <div>
-                    <p>JavaScript Teil</p>
+                    <h3>JavaScript Teil</h3>
                     <img class="screenshots" src="pictures/BMI If Statements JS Teil.webp" alt="BMI JavaScript"
                         loading="lazy" width="1520" height="1318">
                 </div>
             </div>
 
             <div class="aufgabe" id="quadrGl">
-                <h3>Beispiel: Quadratische Gleichungen</h3>
+                <h2>Beispiel: Quadratische Gleichungen</h2>
 
                 <p>Programm zum Lösen quadratischer Gleichungen</p>
                 <br>
                 <div>
-                    <p>HTML Teil</p>
+                    <h3>HTML Teil</h3>
                     <img class="screenshots" src="pictures/quadratische Gleichung HTML.webp"
                         alt="Quadratische Gleichungen HTML" loading="lazy" width="1520" height="1128">
                 </div>
 
                 <div>
-                    <p>JavaScript Teil</p>
+                    <h3>JavaScript Teil</h3>
                     <img class="screenshots" src="pictures/quadratische Gleichung JS.webp"
                         alt="Quadratische Gleichungen JavaScript" loading="lazy" width="1520" height="1660">
                 </div>
             </div>
 
             <div class="aufgabe" id="zahlenraten">
-                <h3>Beispiel: Zahlenraten</h3>
+                <h2>Beispiel: Zahlenraten</h2>
 
                 <p>Programm, bei dem man eine zufällig generierte Zahl erraten kann.</p>
                 <br>
                 <div>
-                    <p>HTML Teil</p>
+                    <h3>HTML Teil</h3>
                     <img class="screenshots" src="pictures/quadratische Gleichung HTML.webp" alt="Zahlenraten HTML"
                         loading="lazy" width="1520" height="1128">
                 </div>
 
                 <div>
-                    <p>JavaScript Teil</p>
+                    <h3>JavaScript Teil</h3>
                     <img class="screenshots" src="pictures/quadratische Gleichung JS.webp" alt="Zahlenraten JavaScript"
                         loading="lazy" width="1520" height="1660">
                 </div>
