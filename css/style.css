@@ -566,6 +566,8 @@ input:checked+.slider:before {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     font-size: var(--buttonFontSize);
     padding-block: 15px;
