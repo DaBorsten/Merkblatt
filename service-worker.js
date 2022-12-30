@@ -33,6 +33,7 @@ const imagesToPrecache = [
     'pictures/schrauben_html.webp',
     'pictures/schrauben_js.webp',
     'pictures/locale_globale_var.webp',
+    'pictures/kopfgesteuerteSchleifen.webp',
     'favicons/favicon.ico',
     'favicons/favicon-16x16.png',
     'favicons/favicon-32x32.png',
