@@ -370,16 +370,9 @@ section {
     flex-direction: column;
     padding-block: 3vw;
     padding-inline: 3vw;
+    gap: 3vw;
     background-color: var(--contentSectionBackground);
     border-radius: var(--borderRadiusBig);
-}
-
-.contentSection:last-child img {
-    padding-bottom: 0;
-}
-
-.aufgaben>.contentSectionWrapper>.contentSection {
-    gap: 3vw;
 }
 
 h1 {
@@ -530,13 +523,7 @@ input:checked+.slider:before {
 .screenshots {
     max-width: -webkit-fill-available;
     height: auto;
-}
-
-.screenshotTable {
-    max-width: 80vw;
-    height: auto;
-    padding-top: 5%;
-    padding-bottom: 5vh;
+    border-radius: var(--borderRadiusBig);
 }
 
 .aufgabenListe {
@@ -670,13 +657,18 @@ input:checked+.slider:before {
         padding-inline: 5vw;
     }
 
-    .contentSection{
-        padding-block: 6vw;
+    .contentSection {
+        padding: 5vw;
+        gap: 5vw;
     }
 
     .arrowUp {
         bottom: 30px;
         right: 8px;
         background-size: 24px;
+    }
+
+    .screenshots {
+        border-radius: var(--borderRadiusSmall);
     }
 }
