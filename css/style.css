@@ -368,7 +368,8 @@ section {
 .contentSection {
     display: flex;
     flex-direction: column;
-    padding: 3vw;
+    padding-block: 3vw;
+    padding-inline: 3vw;
     background-color: var(--contentSectionBackground);
     border-radius: var(--borderRadiusBig);
 }
@@ -667,6 +668,10 @@ input:checked+.slider:before {
 
     .tab-content {
         padding-inline: 5vw;
+    }
+
+    .contentSection{
+        padding-block: 6vw;
     }
 
     .arrowUp {
