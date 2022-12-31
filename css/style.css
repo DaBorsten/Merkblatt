@@ -20,11 +20,11 @@
 
     /* Colors */
 
-    --backgroundColor: hsl(0, 0%, 7%);
+    --backgroundColor: hsl(0, 0%, 10%);
 
-    --settingsSection: hsl(0, 0%, 17%);
+    --settingsSection: hsl(0, 0%, 18%);
 
-    --contentSectionBackground: hsl(0, 0%, 10%);
+    --contentSectionBackground: hsl(0, 0%, 14%);
 
     --headingOneColor: hsl(0, 0%, 100%);
 
