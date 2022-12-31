@@ -20,9 +20,11 @@
 
     /* Colors */
 
-    --backgroundColor: hsl(0, 0%, 13%);
+    --backgroundColor: hsl(0, 0%, 7%);
 
     --settingsSection: hsl(0, 0%, 17%);
+
+    --contentSectionBackground: hsl(0, 0%, 10%);
 
     --headingOneColor: hsl(0, 0%, 100%);
 
@@ -64,6 +66,8 @@
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 html,
@@ -144,7 +148,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     height: 100dvh;
-    padding-top: 100px;
+    padding-top: 65px;
     inset: 0 0 0 0;
     z-index: 1000;
     background-color: var(--backgroundColor);
@@ -160,7 +164,6 @@ body::-webkit-scrollbar {
     flex-direction: column;
     width: 90vw;
     max-width: 1000px;
-    gap: 15px;
 }
 
 .settingsCategory {
@@ -168,7 +171,9 @@ body::-webkit-scrollbar {
     flex-direction: column;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--settingsLabelFontColor);
-    gap: 5px;
+    gap: 15px;
+    padding-block-start: 15px;
+    padding-block-end: 25px;
 }
 
 .settingsCategory:last-of-type {
@@ -186,6 +191,12 @@ body::-webkit-scrollbar {
 .settingsLabel {
     font-size: var(--settingsLabelFontSize);
     color: var(--settingsLabelFontColor);
+}
+
+.settingSections {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .settingSection {
@@ -346,17 +357,28 @@ section {
     display: none;
 }
 
-.contentSection {
-    border-bottom: 2px dashed var(--paragraphColor);
-    padding-bottom: 7vh;
+.contentSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5vw;
+    padding-bottom: 20px;
 }
 
-.contentSection:last-child {
-    border-bottom: none;
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    background-color: var(--contentSectionBackground);
+    border-radius: var(--borderRadiusBig);
 }
 
 .contentSection:last-child img {
     padding-bottom: 0;
+}
+
+.aufgaben>.contentSectionWrapper>.contentSection {
+    gap: 3vw;
 }
 
 h1 {
@@ -505,7 +527,7 @@ input:checked+.slider:before {
 }
 
 .screenshots {
-    max-width: 80vw;
+    max-width: -webkit-fill-available;
     height: auto;
 }
 
@@ -517,23 +539,7 @@ input:checked+.slider:before {
 }
 
 .aufgabenListe {
-    padding-bottom: 10vh;
-    border-bottom: 2px solid var(--paragraphColor);
     flex-wrap: wrap;
-}
-
-.aufgabe {
-    padding: 10vh 0;
-    border-bottom: 2px dashed var(--paragraphColor);
-}
-
-.aufgabe:last-child {
-    padding: 10vh 0 0 0;
-    border-bottom: none;
-}
-
-.aufgabe:last-child img {
-    padding-bottom: 0;
 }
 
 .arrowUp {
@@ -630,6 +636,8 @@ input:checked+.slider:before {
         transition: transform 350ms ease-out;
         inset-inline: unset;
         inset: 0 0 0 30vw;
+        -webkit-padding-end: 24px;
+        padding-inline-end: 24px;
 
         box-shadow: none;
         z-index: 999;
@@ -640,6 +648,10 @@ input:checked+.slider:before {
         box-shadow: -10px 0px 20px 0px hsla(0, 0%, 7%, 0.7);
     }
 
+    .navbar>.btns {
+        width: 100%;
+    }
+
     .hideOnMobile {
         display: none;
     }
@@ -647,7 +659,6 @@ input:checked+.slider:before {
     .btns {
         flex-direction: column;
         gap: 8px;
-        width: 100%;
     }
 
     .navbar>.btns {
@@ -656,11 +667,6 @@ input:checked+.slider:before {
 
     .tab-content {
         padding-inline: 5vw;
-    }
-
-    .screenshots {
-        max-width: 90vw;
-        height: auto;
     }
 
     .arrowUp {
