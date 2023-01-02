@@ -2,7 +2,7 @@
     /* Font Sizes */
     /* Document */
     --headingOneFontSize: 1.875rem;
-    --headingTwoFontSize: 2.25rem;
+    --headingTwoFontSize: 2.75rem;
     --headingThreeFontSize: 1.75rem;
 
     --paragraphFontSize: 1.25rem;
@@ -609,10 +609,10 @@ input:checked+.slider:before {
 @media (max-width: 768px) {
 
     :root {
-        --headingTwoFontSize: 1.563rem;
+        --headingTwoFontSize: 1.75rem;
         --headingThreeFontSize: 1.25rem;
 
-        --paragraphFontSize: 1.125rem;
+        --paragraphFontSize: 1.1rem;
     }
 
     .mobileTopBar {
