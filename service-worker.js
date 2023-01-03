@@ -3,6 +3,7 @@
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', { scope: "/" })
         .then(registration => {
+            console.log('Registrierung erfolgreich. Der Scope ist ' + registration.scope)
             // Rufe die Funktion alle 24 Stunden auf
             setInterval(deleteUnusedCache, 86400000);
         });
