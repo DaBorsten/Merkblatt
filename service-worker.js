@@ -19,31 +19,39 @@ const resourcesToPrecache = [
     'webmanifest.json'
 ]
 const imagesToPrecache = [
-    'pictures/htmlTags.webp',
+    // HTML
     'pictures/htmlGrundstruktur.webp',
+    'pictures/htmlTags.webp',
     'pictures/tabelle.webp',
-    'pictures/BMI If Statements HTML Teil.webp',
-    'pictures/BMI If Statements JS Teil.webp',
-    'pictures/if else.webp',
+    // JavaScript
     'pictures/JavaScriptVerlinken.webp',
-    'pictures/jsEinfacheDatentypen.webp',
     'pictures/jsVariablen.webp',
+    'pictures/jsEinfacheDatentypen.webp',
     'pictures/logische Operatoren.webp',
-    'pictures/quadratische Gleichung HTML.webp',
-    'pictures/quadratische Gleichung JS.webp',
-    'pictures/schrauben_html.webp',
-    'pictures/schrauben_js.webp',
+    'pictures/if else.webp',
     'pictures/locale_globale_var.webp',
     'pictures/kopfgesteuerteSchleifen.webp',
+    // Aufgaben
+    'pictures/schrauben_html.webp',
+    'pictures/schrauben_js.webp',
+    'pictures/BMI If Statements HTML Teil.webp',
+    'pictures/BMI If Statements JS Teil.webp',
+    'pictures/quadratische Gleichung HTML.webp',
+    'pictures/quadratische Gleichung JS.webp',
+    'pictures/zahlenraten_html.webp',
+    'pictures/zahlenraten_js.webp',
+    // Icons
+    'icons/close.svg',
+    'icons/menu.svg',
+    'icons/arrow-up.svg',
+    'icons/settings.svg',
+    // Favicons
     'favicons/favicon.ico',
     'favicons/favicon-16x16.png',
     'favicons/favicon-32x32.png',
     'favicons/android-chrome-192x192.png',
     'favicons/android-chrome-512x512.png',
-    'icons/close.svg',
-    'icons/menu.svg',
-    'icons/arrow-up.svg',
-    'icons/settings.svg'
+
 ]
 
 self.addEventListener('install', event => {
