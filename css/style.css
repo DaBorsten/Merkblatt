@@ -259,9 +259,11 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     cursor: pointer;
     padding: 0;
+    transition: all 150ms ease-in-out;
 }
 
-.mobileMenuRoundBackground:focus-within {
+.mobileMenuRoundBackground:focus-within,
+.mobileMenuRoundBackground:hover {
     background-color: var(--mobileMenuFucus);
 }
 

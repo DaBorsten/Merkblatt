@@ -191,6 +191,12 @@ window.onbeforeunload = () => {
   })
 }
 /*********************************************************************/
+// Aufgaben Tab über eigentlichem Element landen
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId)
+  window.scrollTo({ top: element.offsetTop, behavior: scrolling })
+}
+/*********************************************************************/
 // Back to Top Button
 window.addEventListener('scroll', () => {
   if ((localStorage.getItem('back-to-top-button') === 'true')) {
